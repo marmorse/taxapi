@@ -18,11 +18,11 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
       <header className="sticky top-0 z-40 w-full border-b border-b-slate-200 bg-white">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav items={docsConfig.mainNav}>
-            <DocsSidebarNav items={docsConfig.sidebarNav} />
+           <DocsSidebarNav items={docsConfig.sidebarNav} /> 
           </MainNav>
           <div className="flex flex-1 items-center space-x-4 sm:justify-end">
             <div className="flex-1 sm:flex-grow-0">
-              <DocsSearch />
+              {/* <DocsSearch /> */}
             </div>
             <nav className="flex space-x-4">
               <Link
@@ -40,7 +40,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
         </div>
       </header>
       <div className="container flex-1">{children}</div>
-      <SiteFooter />
+    <SiteFooter />
     </div>
   )
 }
