@@ -30,13 +30,13 @@ const getPostsForUser = cache(async (userId: User["id"]) => {
 
 export default async function DashboardPage() {
   const user = await getCurrentUser()
-
+  console.log(user)
   if (!user) {
     redirect(authOptions.pages.signIn)
   }
 
   const posts = await getPostsForUser(user.id)
-
+  console.log(posts); 
   return (
     <DashboardShell>
       <DashboardHeader heading="Posts" text="Create and manage posts.">

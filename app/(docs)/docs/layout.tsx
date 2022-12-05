@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { cache } from "react"
 
-async function getData() {
+const getDocsData = cache(async function getData() {
   const res = await fetch(
     `${process.env.STRAPI_URL_BASE}/api/docs-categories?populate=%2A`,
     {
@@ -12,14 +13,14 @@ async function getData() {
     }
   );
   return res.json();
-}
+})
 
 interface DocsLayoutProps {
   children: React.ReactNode
 }
 
 export default async function DocsLayout({ children }: DocsLayoutProps) {
-  const raw = await getData();
+  const raw = await getDocsData(); 
   const categories = raw?.data;
   return (
     <div className="flex-1 md:grid md:grid-cols-[220px_1fr] md:gap-6 lg:grid-cols-[240px_1fr] lg:gap-10">
@@ -31,7 +32,7 @@ export default async function DocsLayout({ children }: DocsLayoutProps) {
                   <div className="">
                     <i className="bx bx-home"></i>
                   </div>
-                  <span className="text-xl font-bold">
+                  <span className="mb-1 rounded-md px-2 py-4 text-lg font-semibold">
                     {category.attributes.title}
                   </span>
                 </span>

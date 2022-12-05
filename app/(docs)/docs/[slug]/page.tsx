@@ -47,7 +47,7 @@ export default async function DocPage({ params }: DocPageProps) {
           {articleAttributes.section.length > 0
             ? articleAttributes.section.map((sectionItem: any, index: number) => (
                 <div key={"sectionItem" + index}>
-                  <h4>{sectionItem?.title}</h4>
+                  <h4 className='font-semibold py-4'>{sectionItem?.title}</h4>
                   <p>{sectionItem?.content}</p>
                 </div>
               ))
