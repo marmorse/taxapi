@@ -1,19 +1,22 @@
 import Link from "next/link"
-import { Doc } from "contentlayer/generated"
+
 
 import { docsConfig } from "@/config/docs"
 import { Icons } from "@/components/icons"
-
+/* 
 interface DocsPagerProps {
   doc: Doc
 }
+*/ 
+  /*
+export function DocsPager() {
 
-export function DocsPager({ doc }: DocsPagerProps) {
   const pager = getPagerForDoc(doc)
 
   if (!pager) {
     return null
   }
+
 
   return (
     <div className="flex flex-row items-center justify-between">
@@ -38,7 +41,8 @@ export function DocsPager({ doc }: DocsPagerProps) {
     </div>
   )
 }
-
+  */ 
+ 
 export function getPagerForDoc(doc: Doc) {
   const flattenedLinks = [null, ...flatten(docsConfig.sidebarNav), null]
   const activeIndex = flattenedLinks.findIndex(

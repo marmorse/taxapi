@@ -118,7 +118,7 @@ export default async function handler(req: NextRequest) {
                   stroke-linejoin="round"
                 />
               </svg>
-              <div tw="flex ml-2">github.com/shadcn/Taxapi</div>
+              <div tw="flex ml-2">github.com/mmorse/Taxapi</div>
             </div>
           </div>
         </div>

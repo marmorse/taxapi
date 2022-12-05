@@ -92,7 +92,6 @@ dependencies:
   "@vercel/analytics": 0.1.5_react@18.2.0
   "@vercel/og": 0.0.21
   clsx: 1.2.1
-  contentlayer: 0.2.9
   date-fns: 2.29.3
   lucide-react: 0.92.0_sh5qlbywuemxd2y3xkrw2y2kr4
   next: 13.0.4_biqbaboplfbrettd7655fr4n2y

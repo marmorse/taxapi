@@ -5,7 +5,7 @@ export const dashboardConfig: DashboardConfig = {
     {
       title: "Dashboard",
       href: "/dashboard",
-    },
+    },  
     {
       title: "Documentation",
       href: "/docs",
